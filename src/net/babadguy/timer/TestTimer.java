@@ -31,11 +31,18 @@ public class TestTimer {
         /**
          * 在时间等于或超过time的时候首次执行task,之后每隔period毫秒执行一个task
          */
-        testTimerTask.setName("schedule2");
-        timer.schedule(testTimerTask,calendar.getTime(),2000);
-
-
-
+//        testTimerTask.setName("schedule2");
+//        timer.schedule(testTimerTask,calendar.getTime(),2000);
+        /**
+         * 等待delay毫秒后执行且仅执行一次task
+         */
+//            testTimerTask.setName("schedule3");
+//            timer.schedule(testTimerTask,1000);
+        /**
+         * 等待delay毫秒后首次执行task,之后每隔period毫秒执行一个task
+          */
+        testTimerTask.setName("schedule4");
+        timer.schedule(testTimerTask,3000,2000);
 
     }
 }
