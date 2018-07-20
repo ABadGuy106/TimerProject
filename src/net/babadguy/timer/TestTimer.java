@@ -26,8 +26,13 @@ public class TestTimer {
         /**
          * 在时间等于或超过time的时候执行且仅执行一次task
          */
-        testTimerTask.setName("schedule1");
-        timer.schedule(testTimerTask,calendar.getTime());
+//        testTimerTask.setName("schedule1");
+//        timer.schedule(testTimerTask,calendar.getTime());
+        /**
+         * 在时间等于或超过time的时候首次执行task,之后每隔period毫秒执行一个task
+         */
+        testTimerTask.setName("schedule2");
+        timer.schedule(testTimerTask,calendar.getTime(),2000);
 
 
 
